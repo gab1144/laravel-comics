@@ -6,13 +6,11 @@
 
     <main>
         <div class="container">
-
-            <span class="tag">Current series</span>
-            <h1>Comics</h1>
+            <h1>News</h1>
         </div>
     </main>
 @endsection
 
 @section('title')
-    Comics
+    News
 @endsection

@@ -1,6 +1,5 @@
-@import '~bootstrap/scss/bootstrap';
-//@use 'partials/variables' as *;
-//@use 'partials/mixin' as *;
+@use 'partials/variables' as *;
+@use 'partials/mixin' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
@@ -25,8 +24,7 @@ header {
         justify-content: space-between;
         height: 115px;
         .logo {
-            display: flex;
-            align-items: center;
+            @include centerFlex('vertical');
 
           img {
             height: 80px;
@@ -59,6 +57,76 @@ header {
         }
       }
 }
+
+.jumbotron {
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    height: 400px;
+}
+
+main {
+    background-color: black;
+    color: white;
+    .container {
+      padding: 50px 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .tag {
+        text-transform: uppercase;
+        position: absolute;
+        top: calc(-15px - 12.5px);
+        left: 0;
+        background-color: blue;
+        padding: 15px 30px;
+        font-size: 25px;
+        font-weight: 800;
+      }
+      .btn-load-more {
+        align-self: center;
+      }
+    }
+
+    .card-area {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  .card{
+    margin-bottom: 45px;
+    padding: 0 12.5px;
+    width: calc(100% / 6);
+    min-width: 190px;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover img{
+      opacity: 0.5;
+    }
+    .img-area {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .price-hover{
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      aspect-ratio: 1;
+      @include centerFlex('both');
+      span {
+        display: block;
+      }
+    }
+  }
 
 .footer-top{
     background-image: url("../img/footer-bg.jpg");
