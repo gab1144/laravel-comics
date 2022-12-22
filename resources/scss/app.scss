@@ -1,6 +1,7 @@
 @use 'partials/variables' as *;
 @use 'partials/mixin' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 * {
   padding: 0;
@@ -29,6 +30,23 @@ header {
           img {
             height: 80px;
           }
+        }
+        .menu-seachbar{
+            display: flex;
+            height: 100%;
+        }
+        .searchbar {
+            align-self: center;
+            display: flex;
+            color: black;
+            border-bottom: 3px solid $primary-color;
+        }
+        input {
+            height: fit-content;
+            border: none;
+            align-self: center;
+            text-align: right;
+            padding-right: 5px;
         }
         ul {
           list-style: none;
