@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="avaiability">
-                            Check Avaiability
+                            Check Avaiability <span>&#9660;</span>
                         </div>
                     </div>
                     <p>

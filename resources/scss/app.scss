@@ -206,10 +206,10 @@ main {
     color: white;
     display: flex;
     border-bottom: 1px solid black;
-    span {
-        color: rgba(255, 255, 255, 0.481);
-    }
     .price {
+        span {
+            color: rgba(255, 255, 255, 0.481);
+        }
         padding: 20px 0;
         display: flex;
         justify-content: space-between;
@@ -221,10 +221,14 @@ main {
         padding-right: 10px;
     }
     .avaiability {
+        text-align: center;
         padding: 20px 0;
         width: 30%;
         padding-left: 10px;
         border-left: 1px solid black;
+        span {
+            font-size: 10px;
+        }
     }
   }
 
