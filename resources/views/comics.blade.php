@@ -19,6 +19,19 @@
             @endforeach
             </div>
         </div>
+        <div class="main-icons-area">
+            @php
+                $icons = config('db.main_icons')
+            @endphp
+            <div class="container">
+                @foreach ($icons as $icon)
+                <div class="icon">
+                    <img src="{{ Vite::asset('resources/img/'.$icon['img']) }}" alt="">
+                    <span>{!! $icon['text'] !!}</span>
+                </div>
+                @endforeach
+            </div>
+        </div>
     </main>
 @endsection
 

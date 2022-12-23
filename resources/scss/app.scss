@@ -161,6 +161,37 @@ main {
   .main-comic-detail {
     background-color: white;
     color: black;
+    .icons-area {
+        border-top: 1px solid grey;
+        background-color: rgb(246, 246, 246);
+        .container {
+          @include centerFlex('both');
+          flex-wrap: wrap;
+          flex-direction: row;
+          text-transform: uppercase;
+          padding: 0;
+          .icon {
+            color: grey;
+            padding: 20px;
+            border-left: 1px solid grey;
+            width: calc(100%/4);
+            display: flex;
+            justify-content: space-between;
+            height: 90px;
+            span {
+                display: block;
+                font-size: 15px;
+            }
+            img {
+                height: 100%;
+                filter: invert(40%);
+            }
+          }
+          .icon:last-of-type {
+            border-right: 1px solid grey;
+          }
+        }
+      }
   }
 
   .smaller.container {
@@ -196,6 +227,31 @@ main {
         border-left: 1px solid black;
     }
   }
+
+  .main-icons-area {
+    background-color: $primary-color;
+    .container {
+      @include centerFlex('both');
+      flex-wrap: wrap;
+      text-transform: uppercase;
+      flex-direction: row;
+      .icon {
+        padding: 50px 0;
+        width: calc(100%/5);
+        min-width: 205px;
+        @include centerFlex('both');
+        img {
+          height: 55px;
+          margin-right: 15px;
+        }
+        span {
+          display: block;
+          text-overflow: ellipsis;;
+        }
+      }
+    }
+  }
+
   .detail-area {
     width: 100%;
     display: flex;
