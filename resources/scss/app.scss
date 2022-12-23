@@ -20,6 +20,20 @@ body {
 }
 
 header {
+    .header-top {
+        background-color: $primary-color;
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 25px;
+            font-size: 13px;
+            color: white;
+            > div:first-of-type {
+                margin-right: 50px;
+            }
+        }
+    }
     .container {
         display: flex;
         justify-content: space-between;
