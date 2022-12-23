@@ -215,6 +215,42 @@ main {
         }
     }
   }
+  .talent-specs {
+    background-color: rgb(246, 246, 246);
+    h2 {
+        padding-bottom: 20px;
+    }
+    .smaller {
+        display: flex;
+        flex-direction: row;
+    }
+    .info {
+        border-top: 1px solid grey;
+        padding: 10px 0;
+        display: flex;
+    }
+    .info:last-of-type {
+        border-bottom: 1px solid grey;
+    }
+    .field {
+        width: 30%;
+    }
+    .content {
+        width: 70%;
+    }
+    .talent-area {
+        width: 50%;
+        padding-right: 10px;
+    }
+    .specs-area {
+        width: 50%;
+        padding-left: 10px;
+    }
+    a.series {
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+  }
 
 .footer-top{
     background-image: url("../img/footer-bg.jpg");

@@ -37,9 +37,55 @@
                     <img src="{{ Vite::asset('resources/img/adv.jpg') }}" alt="Adv">
                 </div>
             </div>
-                <div class="talent-area">
-                </div>
+            </div>
+            <div class="talent-specs">
+                <div class="smaller container">
+                    <div class="talent-area">
+                        <h2>Talent</h2>
+                        <div class="info">
+                            <div class="field">
+                                Art by:
+                            </div>
+                            <div class="content">
+                                {{ implode(', ', $comic['artists']) }}
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="field">
+                                Written by:
+                            </div>
+                            <div class="content">
+                                {{ implode(', ', $comic['writers']) }}
+                            </div>
+                        </div>
+                    </div>
                     <div class="specs-area">
+                        <h2>Specs</h2>
+                        <div class="info">
+                            <div class="field">
+                                Series:
+                            </div>
+                            <div class="content">
+                                <a href="#" class="series">{!! $comic['series'] !!}</a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="field">
+                                U.S. Price:
+                            </div>
+                            <div class="content">
+                                {!! $comic['price'] !!}
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="field">
+                                On Sale Date:
+                            </div>
+                            <div class="content">
+                                {!! $comic['sale_date'] !!}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
