@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('comics');
+    $comics = config('db.comics');
+    return view('comics', compact('comics'));
 })->name('comics');
 
 Route::get('/prodotti', function () {
@@ -60,3 +61,12 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
+
+Route::get('/dettaglio-fumetto/{id}', function ($id) {
+
+    $comics = config('db.comics');
+    $comic_get = array_filter($comics, fn ($item) => $item['id'] == $id);
+    $comic = $comic_get[array_key_first($comic_get)];
+
+    return view('comic_detail', compact('comic'));
+})->name('comic_detail');

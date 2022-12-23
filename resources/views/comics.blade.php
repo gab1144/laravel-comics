@@ -8,7 +8,16 @@
         <div class="container">
 
             <span class="tag">Current series</span>
-            <h1>Comics</h1>
+            <div class="card-area">
+                @foreach ($comics as $comic)
+                <a href="{{ route('comic_detail', ['id' => $comic['id']]) }}" class="card">
+                    <div class="img-area">
+                        <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+                    </div>
+                    <span>{{$comic['title']}}</span>
+                </a>
+            @endforeach
+            </div>
         </div>
     </main>
 @endsection
