@@ -1,7 +1,6 @@
 <header>
     <div class="container">
         <div class="logo">
-            <!-- percorso assoluto perché l'immagine è in public -->
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
           </div>
 
